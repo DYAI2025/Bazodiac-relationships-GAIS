@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in — Bazodiac Relationships</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="auth-page-wrapper">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header with just wordmark -->
+  <header class="global-header">
+    <div class="container header-container" style="justify-content: center;">
+      <a href="./index.html" class="wordmark" id="auth-back-link">Bazodiac Relationships</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="auth-main">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Welcome back</h1>
+        <p>Log in to continue your Bazodiac Relationship work.</p>
+      </div>
+
+      <!-- Password recovery inline mock container -->
+      <div class="recovery-prototype-box" id="recovery-prototype-box" role="region" tabindex="-1" aria-labelledby="recovery-title">
+        <h3 id="recovery-title" class="serif-heading" style="font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--cobalt-deep);">Password Recovery</h3>
+        <p>Password recovery is not connected in this frontend prototype.</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+          <a href="./register.html" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem; min-height: auto;">Create an account</a>
+          <button type="button" class="btn btn-secondary" id="cancel-recovery" style="padding: 0.4rem 1rem; font-size: 0.85rem; min-height: auto;">Back to login</button>
+        </div>
+      </div>
+
+      <!-- ARIA-live Error Summary Area -->
+      <div class="error-summary-box" id="error-summary" tabindex="-1" role="alert" aria-labelledby="error-summary-title">
+        <h3 id="error-summary-title">There was a problem logging in</h3>
+        <ul id="error-summary-list"></ul>
+      </div>
+
+      <form class="auth-form" id="login-form" novalidate>
+        <!-- Email field -->
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-input" type="email" id="email" autocomplete="email" required aria-describedby="email-error">
+          <span class="field-error-msg" id="email-error"></span>
+        </div>
+
+        <!-- Password field -->
+        <div class="form-group" style="position: relative;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label class="form-label" for="password">Password</label>
+            <a href="#forgot" class="auth-forgot-link" id="forgot-password-link">Forgot password?</a>
+          </div>
+          <div class="input-wrapper" style="margin-top: 0.5rem;">
+            <input class="form-input" type="password" id="password" autocomplete="current-password" required aria-describedby="password-error">
+            <button type="button" class="btn-toggle-password" id="login-toggle-pwd" aria-controls="password" aria-label="Toggle password visibility">Show password</button>
+          </div>
+          <span class="field-error-msg" id="password-error"></span>
+        </div>
+
+        <!-- Submit btn -->
+        <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">Log in</button>
+
+        <div class="auth-form-footer">
+          <p>
+            New to Bazodiac? <a href="./register.html" class="link-alt" id="login-create-link">Create an account</a>
+          </p>
+          <p style="margin-top: 0.5rem;">
+            <a href="./index.html" class="link-alt" style="font-size: 0.85rem;">← Back to Bazodiac Relationships</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Container for interactive status toast notices -->
+  <div class="status-toast-container" id="status-toast-container"></div>
+
+  <footer class="global-footer" style="padding: 2rem 0; margin-top: auto; background-color: var(--ink-primary); border-top: 1px solid var(--line-faint);">
+    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--surface-warm);">
+      © Bazodiac Relationships · <a href="./index.html" style="color: var(--surface-soft); text-decoration: underline;">Back to Home</a>
+    </div>
+  </footer>
+
+  <script src="./auth-ui.js"></script>
+</body>
+</html>

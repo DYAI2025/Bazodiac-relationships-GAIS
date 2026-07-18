@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create your Bazodiac account — Bazodiac Relationships</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="auth-page-wrapper">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header with just wordmark as per visual spec -->
+  <header class="global-header">
+    <div class="container header-container" style="justify-content: center;">
+      <a href="./index.html" class="wordmark">Bazodiac Relationships</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="auth-main">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Create your Bazodiac account</h1>
+        <p>Save your progress and begin a relationship report when the product flow is connected.</p>
+      </div>
+
+      <!-- ARIA-live Error Summary Area -->
+      <div class="error-summary-box" id="error-summary" tabindex="-1" role="alert" aria-labelledby="error-summary-title">
+        <h3 id="error-summary-title">There was a problem creating your account</h3>
+        <ul id="error-summary-list"></ul>
+      </div>
+
+      <form class="auth-form" id="register-form" novalidate>
+        <!-- Email field -->
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-input" type="email" id="email" autocomplete="email" required aria-describedby="email-error">
+          <span class="field-error-msg" id="email-error"></span>
+        </div>
+
+        <!-- Password field -->
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="input-wrapper">
+            <input class="form-input" type="password" id="password" autocomplete="new-password" required aria-describedby="password-error">
+            <button type="button" class="btn-toggle-password" id="reg-toggle-pwd" aria-controls="password" aria-label="Toggle password visibility">Show password</button>
+          </div>
+          <span class="field-error-msg" id="password-error"></span>
+        </div>
+
+        <!-- Confirm Password field -->
+        <div class="form-group">
+          <label class="form-label" for="confirm-password">Confirm password</label>
+          <div class="input-wrapper">
+            <input class="form-input" type="password" id="confirm-password" autocomplete="new-password" required aria-describedby="confirm-password-error">
+            <button type="button" class="btn-toggle-password" id="reg-toggle-confirm" aria-controls="confirm-password" aria-label="Toggle password confirmation visibility">Show password</button>
+          </div>
+          <span class="field-error-msg" id="confirm-password-error"></span>
+        </div>
+
+        <!-- Consent Checkbox -->
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="consent" required aria-describedby="consent-error">
+          <label class="checkbox-label" for="consent">
+            I agree to the <a href="./terms.html" class="link-alt" id="reg-terms-link">Terms</a> and acknowledge the <a href="./privacy.html" class="link-alt" id="reg-privacy-link">Privacy Principles</a>.
+          </label>
+        </div>
+        <span class="field-error-msg" id="consent-error" style="margin-top: -0.5rem; margin-left: 2rem;"></span>
+
+        <!-- Submit btn -->
+        <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">Create account</button>
+
+        <div class="auth-form-footer">
+          <p>
+            Already have an account? <a href="./login.html" class="link-alt" id="reg-login-link">Log in</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Container for interactive status toast notices -->
+  <div class="status-toast-container" id="status-toast-container"></div>
+
+  <footer class="global-footer" style="padding: 2rem 0; margin-top: auto; background-color: var(--ink-primary); border-top: 1px solid var(--line-faint);">
+    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--surface-warm);">
+      © Bazodiac Relationships · <a href="./index.html" style="color: var(--surface-soft); text-decoration: underline;">Back to Home</a>
+    </div>
+  </footer>
+
+  <script src="./auth-ui.js"></script>
+</body>
+</html>

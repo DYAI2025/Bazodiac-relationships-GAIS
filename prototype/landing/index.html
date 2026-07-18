@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bazodiac Relationships — Relationship Reflection, Not a Verdict</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Skip to main content landmark -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- In-Memory Motion Preference Selector -->
+  <div class="motion-toggle-container">
+    <button id="motion-toggle-btn" class="btn-motion-toggle" aria-label="Toggle motion effects">Reduce motion</button>
+  </div>
+
+  <!-- SECTION 1 — GLOBAL HEADER -->
+  <header class="global-header">
+    <div class="container header-container">
+      <a href="./index.html" class="wordmark" id="nav-wordmark">Bazodiac Relationships</a>
+      
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="#how-it-works" id="nav-how">How it works</a>
+        <a href="#inside-report" id="nav-inside">Inside the report</a>
+        <a href="#method" id="nav-method">Method</a>
+        <a href="#privacy" id="nav-privacy">Privacy</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="./login.html" class="btn-login" id="nav-login">Log in</a>
+        <a href="./register.html?next=create-report" class="btn btn-primary" id="nav-register">Create account</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu-overlay" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-label="Mobile Navigation">
+    <nav class="mobile-menu-nav">
+      <a href="#how-it-works">How it works</a>
+      <a href="#inside-report">Inside the report</a>
+      <a href="#method">Method</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+    <div class="mobile-menu-actions">
+      <a href="./register.html?next=create-report" class="btn btn-primary">Create account</a>
+      <a href="./login.html" class="btn btn-secondary">Log in</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- SECTION 2 — HERO -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">RELATIONSHIP REFLECTION · NOT A COMPATIBILITY SCORE</div>
+          <h1 id="hero-title" class="hero-title">See the relationship, not a verdict.</h1>
+          <p class="hero-lead">
+            Bazodiac Relationships brings together structured perspectives from Chinese metaphysics and Western astrology to help two people reflect on communication, closeness, conflict, repair, and timing—without reducing the relationship to a single score.
+          </p>
+          <div class="hero-buttons">
+            <a href="./register.html?next=create-report" class="btn btn-primary" id="hero-create-btn">Create your relationship report</a>
+            <a href="#how-it-works" class="btn btn-secondary" id="hero-see-how-btn">See how it works</a>
+          </div>
+          <div class="hero-login-prompt">
+            Already have an account? <a href="./login.html?next=create-report" class="link-alt" id="hero-login-link">Log in.</a>
+          </div>
+          <div class="hero-trust-indicators">
+            <div class="trust-item"><span class="trust-dot"></span> Reflective, not diagnostic</div>
+            <div class="trust-item"><span class="trust-dot"></span> Evidence remains visible</div>
+            <div class="trust-item"><span class="trust-dot"></span> No compatibility percentage</div>
+          </div>
+        </div>
+
+        <!-- Decorative visual -->
+        <div class="hero-visual-wrapper">
+          <svg viewBox="0 0 800 600" width="100%" height="100%" aria-hidden="true" style="background: transparent;">
+            <g class="network-group">
+              <path d="M 400,200 L 486.6,250 L 486.6,350 L 400,400 L 313.4,350 L 313.4,250 Z" fill="none" stroke="rgba(39, 56, 108, 0.12)" stroke-width="1" />
+              <path d="M 400,100 L 573.2,200 L 573.2,400 L 400,500 L 226.8,400 L 226.8,200 Z" fill="none" stroke="rgba(142, 120, 81, 0.08)" stroke-width="1" stroke-dasharray="4 4" />
+              
+              <!-- Left Network (Person A) -->
+              <circle cx="200" cy="220" r="5" fill="#8da8a1" />
+              <circle cx="160" cy="300" r="4" fill="#a49596" />
+              <circle cx="240" cy="360" r="6" fill="#8e7851" />
+              <circle cx="180" cy="420" r="4" fill="#27386c" />
+              <line x1="160" y1="300" x2="200" y2="220" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              <line x1="200" y1="220" x2="240" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              <line x1="160" y1="300" x2="240" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              <line x1="240" y1="360" x2="180" y2="420" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              
+              <!-- Right Network (Person B) -->
+              <circle cx="600" cy="220" r="5" fill="#8da8a1" />
+              <circle cx="640" cy="300" r="4" fill="#a49596" />
+              <circle cx="560" cy="360" r="6" fill="#8e7851" />
+              <circle cx="620" cy="420" r="4" fill="#27386c" />
+              <line x1="640" y1="300" x2="600" y2="220" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              <line x1="600" y1="220" x2="560" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              <line x1="640" y1="300" x2="560" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+              <line x1="560" y1="360" x2="620" y2="420" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+
+              <g class="evidence-connections">
+                <line x1="240" y1="360" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.35)" stroke-width="1.5" stroke-dasharray="5 3" class="animated-line" />
+                <line x1="200" y1="220" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.2)" stroke-width="1" />
+                <line x1="560" y1="360" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.35)" stroke-width="1.5" stroke-dasharray="5 3" class="animated-line" />
+                <line x1="600" y1="220" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.2)" stroke-width="1" />
+              </g>
+
+              <!-- Divided circle core -->
+              <g transform="translate(400, 300)">
+                <circle cx="0" cy="0" r="38" fill="none" stroke="#ab9b73" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+                <path d="M 0,-30 A 30,30 0 0,0 0,30 Z" fill="#27386c" fill-opacity="0.9" />
+                <path d="M 0,-30 A 30,30 0 0,1 0,30 Z" fill="#f3e0ce" fill-opacity="0.95" stroke="#ab9b73" stroke-width="1" />
+                <circle cx="0" cy="0" r="6" fill="#a94432" />
+                <circle cx="0" cy="0" r="14" fill="none" stroke="#a94432" stroke-width="1" stroke-opacity="0.5" />
+              </g>
+            </g>
+          </svg>
+          <div class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+            Concept illustration: Two independent node networks corresponding to two people flowing toward a split shared circular node in the center.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — VALUE FRAME -->
+    <section class="value-section section-spacing" aria-labelledby="value-title">
+      <div class="container">
+        <div class="value-intro">
+          <h2 id="value-title">Two people are not a score.</h2>
+          <p>
+            A relationship is an interaction. Bazodiac separates what each person brings, what may emerge between them, and which conditions can change the expression of the same pattern.
+          </p>
+        </div>
+
+        <!-- 3-Column horizontal composition (Desktop) -->
+        <div class="three-column-composition">
+          <!-- Person A (Left - 27%) -->
+          <div class="composition-col-A">
+            <div class="side-profile-card">
+              <div class="person-avatar-node avatar-a">A</div>
+              <h3 class="card-title">Person A</h3>
+              <p>One way of processing, connecting, and responding.</p>
+              <div class="mono-tag" style="margin-top: 1rem;">Perspective A</div>
+            </div>
+          </div>
+
+          <!-- Shared Dynamic (Center - 46%) -->
+          <div class="composition-col-center">
+            <div class="central-dynamic-card">
+              <div class="person-avatar-node avatar-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 6.1H3"></path>
+                  <path d="M21 12H3"></path>
+                  <path d="M17 17.9H3"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Shared Dynamic</h3>
+              <p>The interaction that may emerge between both people.</p>
+              <div class="mono-tag" style="margin-top: 1.25rem; color: var(--cinnabar-node);">Dynamic Emerging</div>
+            </div>
+          </div>
+
+          <!-- Person B (Right - 27%) -->
+          <div class="composition-col-B">
+            <div class="side-profile-card person-b">
+              <div class="person-avatar-node avatar-b">B</div>
+              <h3 class="card-title">Person B</h3>
+              <p>An equally weighted perspective, not a deviation from a norm.</p>
+              <div class="mono-tag" style="margin-top: 1rem;">Perspective B</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — HOW IT WORKS -->
+    <section class="how-section section-spacing" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="how-intro">
+          <h2 id="how-title">From two profiles to one shared reflection.</h2>
+          <p>We process native calculations separately so that they remain true to their structures before examining the emerging connection.</p>
+        </div>
+
+        <!-- STATE-OF-THE-ART INTERACTIVE WALKTHROUGH PLAYER -->
+        <div class="walkthrough-wrapper" id="how-it-works-walkthrough">
+          <div class="walkthrough-player" id="walkthrough-player">
+            <!-- Left Side: Interactive Steps Column (Playlist) -->
+            <div class="walkthrough-steps-col" id="walkthrough-steps-playlist">
+              
+              <div class="walkthrough-step-card active" data-step="1" role="button" aria-label="Walkthrough Step 1: Add two profiles" id="walkthrough-step-1" tabindex="0">
+                <div class="step-header">
+                  <span class="walkthrough-step-num">01</span>
+                  <span class="active-dot" id="active-dot-1"></span>
+                </div>
+                <h3 class="step-title">Add two profiles</h3>
+                <p>Enter confirmed birth details for both people and choose which systems to include.</p>
+                <!-- Visual progress bar inside active card -->
+                <div class="walkthrough-progress-track">
+                  <div class="walkthrough-progress-bar" id="progress-bar-1"></div>
+                </div>
+              </div>
+              
+              <div class="walkthrough-step-card" data-step="2" role="button" aria-label="Walkthrough Step 2: Keep the sources separate" id="walkthrough-step-2" tabindex="0">
+                <div class="step-header">
+                  <span class="walkthrough-step-num">02</span>
+                  <span class="active-dot" id="active-dot-2"></span>
+                </div>
+                <h3 class="step-title">Keep the sources separate</h3>
+                <p>Each system is calculated in its own native logic before any relationship interpretation is created.</p>
+                <div class="walkthrough-progress-track">
+                  <div class="walkthrough-progress-bar" id="progress-bar-2"></div>
+                </div>
+              </div>
+              
+              <div class="walkthrough-step-card" data-step="3" role="button" aria-label="Walkthrough Step 3: Explore the interaction" id="walkthrough-step-3" tabindex="0">
+                <div class="step-header">
+                  <span class="walkthrough-step-num">03</span>
+                  <span class="active-dot" id="active-dot-3"></span>
+                </div>
+                <h3 class="step-title">Explore the interaction</h3>
+                <p>Review the shared dynamic, possible shadow, possible opportunity, conditions, counter-hypotheses, and evidence.</p>
+                <div class="walkthrough-progress-track">
+                  <div class="walkthrough-progress-bar" id="progress-bar-3"></div>
+                </div>
+              </div>
+
+              <!-- Controls bar -->
+              <div class="walkthrough-player-controls" id="walkthrough-controls">
+                <button class="btn btn-secondary btn-control-play" id="walkthrough-play-btn" aria-label="Pause walkthrough autoplay">
+                  <span class="control-icon" id="walkthrough-play-icon">⏸</span>
+                  <span class="control-text" id="walkthrough-play-text">Pause Autoplay</span>
+                </button>
+                <div class="walkthrough-step-indicators" id="walkthrough-dots-container">
+                  <button class="step-indicator-dot active" data-step="1" aria-label="Go to step 1" id="walkthrough-dot-1"></button>
+                  <button class="step-indicator-dot" data-step="2" aria-label="Go to step 2" id="walkthrough-dot-2"></button>
+                  <button class="step-indicator-dot" data-step="3" aria-label="Go to step 3" id="walkthrough-dot-3"></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side: Highly Visual Walkthrough Simulation Stage -->
+            <div class="walkthrough-visual-viewport" id="walkthrough-viewport">
+              <div class="viewport-canvas-container" id="canvas-container">
+                
+                <!-- Stage 1 View: Add Profiles -->
+                <div class="walkthrough-stage active" id="stage-1">
+                  <div class="stage-mock-form">
+                    <div class="mock-profile-card profile-a-card">
+                      <div class="mock-avatar avatar-sage">A</div>
+                      <div class="mock-input-field">
+                        <span class="mock-label">First Profile Name</span>
+                        <div class="mock-input-text cursor-blink" id="mock-input-a">Emma</div>
+                      </div>
+                      <div class="mock-input-field">
+                        <span class="mock-label">Birth Date & Time</span>
+                        <div class="mock-input-text">12 Nov 1993 · 08:34</div>
+                      </div>
+                    </div>
+
+                    <div class="mock-form-connector-line">
+                      <svg width="40" height="2" viewBox="0 0 40 2" aria-hidden="true">
+                        <line x1="0" y1="1" x2="40" y2="1" stroke="var(--line-faint)" stroke-dasharray="2 2" />
+                      </svg>
+                    </div>
+
+                    <div class="mock-profile-card profile-b-card">
+                      <div class="mock-avatar avatar-rose">B</div>
+                      <div class="mock-input-field">
+                        <span class="mock-label">Second Profile Name</span>
+                        <div class="mock-input-text cursor-blink" id="mock-input-b">Liam</div>
+                      </div>
+                      <div class="mock-input-field">
+                        <span class="mock-label">Birth Date & Time</span>
+                        <div class="mock-input-text">05 Jul 1991 · 15:12</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stage-caption-overlay">
+                    <div class="stage-tag">Step 1 Activation</div>
+                    <h4>Creating Independent Profiles</h4>
+                    <p>Instead of merging birth times into a singular middle, both charts are fully cast with absolute precision.</p>
+                  </div>
+                </div>
+
+                <!-- Stage 2 View: Keep Sources Separate -->
+                <div class="walkthrough-stage" id="stage-2">
+                  <div class="stage-separate-orbits">
+                    <div class="orbit-box orbit-box-a">
+                      <div class="zodiac-spinning-wheel wheel-sage">
+                        <div class="wheel-core">A</div>
+                        <div class="wheel-satellite satellite-1"></div>
+                        <div class="wheel-satellite satellite-2"></div>
+                      </div>
+                      <span class="orbit-label">Person A native structure</span>
+                    </div>
+
+                    <div class="stage-separator-barrier">
+                      <div class="barrier-line"></div>
+                      <span class="barrier-text">Calculations Isolated</span>
+                    </div>
+
+                    <div class="orbit-box orbit-box-b">
+                      <div class="zodiac-spinning-wheel wheel-rose">
+                        <div class="wheel-core">B</div>
+                        <div class="wheel-satellite satellite-3"></div>
+                        <div class="wheel-satellite satellite-4"></div>
+                      </div>
+                      <span class="orbit-label">Person B native structure</span>
+                    </div>
+                  </div>
+                  <div class="stage-caption-overlay">
+                    <div class="stage-tag">Step 2 Safety</div>
+                    <h4>Methodological Integrity</h4>
+                    <p>No mutual distortion or predictive blending. Individual structures are calculated separately using traditional and astronomical algorithms.</p>
+                  </div>
+                </div>
+
+                <!-- Stage 3 View: Explore Interaction -->
+                <div class="walkthrough-stage" id="stage-3">
+                  <div class="stage-unified-dynamic">
+                    <div class="unified-nodes-wrapper">
+                      <div class="unified-node node-a-glow">A</div>
+                      <div class="connection-wave-center">
+                        <div class="wave-ring ring-1"></div>
+                        <div class="wave-ring ring-2"></div>
+                        <div class="interaction-pulse-node"></div>
+                      </div>
+                      <div class="unified-node node-b-glow">B</div>
+                    </div>
+                    
+                    <!-- Callout annotations -->
+                    <div class="stage-annotation ann-shared">
+                      <span class="ann-dot"></span>
+                      <div class="ann-box">Shared Dynamic Emerging</div>
+                    </div>
+                    <div class="stage-annotation ann-shadow">
+                      <span class="ann-dot"></span>
+                      <div class="ann-box">Shadow / Opportunity</div>
+                    </div>
+                  </div>
+                  <div class="stage-caption-overlay">
+                    <div class="stage-tag">Step 3 Exploration</div>
+                    <h4>Understanding the Interaction</h4>
+                    <p>The system overlays both structures to illuminate specific interaction zones, identifying where natural traits meet.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-boundary">
+          <p>The systems provide perspectives. They do not diagnose the relationship or predict its fate.</p>
+        </div>
+
+        <div style="margin-top: 3.5rem; text-align: center;">
+          <a href="#inside-report" class="btn btn-primary" id="explore-sample-btn">Explore a sample dynamic</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — INTERACTIVE REPORT ANATOMY -->
+    <section class="anatomy-section section-spacing" id="inside-report" aria-labelledby="anatomy-title">
+      <div class="container">
+        <div class="anatomy-intro">
+          <h2 id="anatomy-title">The middle explains the interaction. The sides explain where it comes from.</h2>
+          <p>This anatomy highlights the emergence of a relational habit. Use the tabs below to investigate how native individual configurations meet in a common dynamic.</p>
+          <div class="status-label-pill">SAMPLE ONLY · NOT CALCULATED</div>
+        </div>
+
+        <!-- DYNAMIC REPORT SAMPLE SELECTOR -->
+        <div class="report-selector-container" id="report-archetype-selector-box">
+          <span class="selector-label">Select a sample relationship dynamic to load:</span>
+          <div class="report-archetype-pills" id="archetype-pills-container" role="radiogroup" aria-label="Select report sample archetype">
+            <button class="archetype-pill active" data-archetype="tempo" role="radio" aria-checked="true" id="pill-tempo">
+              <span class="pill-dot"></span>
+              <span class="pill-title">Tempo Differences</span>
+            </button>
+            <button class="archetype-pill" data-archetype="autonomy" role="radio" aria-checked="false" id="pill-autonomy">
+              <span class="pill-dot"></span>
+              <span class="pill-title">Autonomy & Closeness</span>
+            </button>
+            <button class="archetype-pill" data-archetype="conflict" role="radio" aria-checked="false" id="pill-conflict">
+              <span class="pill-dot"></span>
+              <span class="pill-title">Conflict Styles</span>
+            </button>
+            <button class="archetype-pill" data-archetype="structure" role="radio" aria-checked="false" id="pill-structure">
+              <span class="pill-dot"></span>
+              <span class="pill-title">Structure & Spontaneity</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- SPLIT VIEW REPORT CONTAINER -->
+        <div class="tabs-widget-split-container" id="report-display-container">
+          <!-- Left Column: Tab Controls & Narrative Content -->
+          <div class="tabs-widget-left" id="report-text-side">
+            <div class="tabs-widget">
+              <div class="tab-list" role="tablist" aria-label="Report Perspective Panels" id="report-tabs-list">
+                <button class="tab-btn" role="tab" id="tab-person-a" aria-selected="false" aria-controls="person-a-panel" tabindex="-1">Person A</button>
+                <button class="tab-btn" role="tab" id="tab-shared-dynamic" aria-selected="true" aria-controls="shared-dynamic-panel" tabindex="0">Shared dynamic</button>
+                <button class="tab-btn" role="tab" id="tab-person-b" aria-selected="false" aria-controls="person-b-panel" tabindex="-1">Person B</button>
+              </div>
+
+              <!-- Tab Panel 1: Person A -->
+              <div class="tab-panel" id="person-a-panel" role="tabpanel" aria-labelledby="tab-person-a" aria-hidden="true">
+                <div class="panel-content">
+                  <div class="panel-meta mono-tag" id="person-a-meta">Individual Tendency</div>
+                  <h3 class="panel-title" id="person-a-title">Earlier verbal processing</h3>
+                  <p class="panel-body" id="person-a-body">
+                    This sample perspective represents a tendency to clarify experience through relatively early dialogue. It is not a fixed trait and must be compared with lived experience.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tab Panel 2: Shared Dynamic (Default Active) -->
+              <div class="tab-panel" id="shared-dynamic-panel" role="tabpanel" aria-labelledby="tab-shared-dynamic" aria-hidden="false">
+                <div class="panel-content">
+                  <div class="panel-meta mono-tag" style="color: var(--cinnabar-node);" id="shared-dynamic-meta">Context-dependent interaction</div>
+                  <h3 class="panel-title" id="shared-dynamic-title">Different processing tempo</h3>
+                  <p class="panel-body" id="shared-dynamic-body">
+                    One person may seek early dialogue while the other first needs time and internal distance. Pressure for immediate clarification can intensify withdrawal; unlimited withdrawal can intensify the experience of contact loss.
+                  </p>
+
+                  <!-- Accordion Region for Conditions -->
+                  <div class="accordion-wrapper" id="conditions-accordion-box">
+                    <button class="accordion-btn" id="accordion-toggle-btn" aria-expanded="false" aria-controls="accordion-content">
+                      <span class="chevron" aria-hidden="true">▼</span>
+                      <span class="btn-text" id="accordion-btn-label">View conditions</span>
+                    </button>
+                    <div class="accordion-content" id="accordion-content">
+                      <div class="conditions-grid">
+                        <div class="condition-list-wrapper">
+                          <h4 id="intensifying-title">Possible intensifying conditions:</h4>
+                          <ul class="condition-ul" id="intensifying-list">
+                            <li>time pressure;</li>
+                            <li>unclear pause expectations;</li>
+                            <li>repeated demands for immediate resolution;</li>
+                            <li>withdrawal without a defined return point.</li>
+                          </ul>
+                        </div>
+                        <div class="condition-list-wrapper">
+                          <h4 id="moderating-title">Possible moderating conditions:</h4>
+                          <ul class="condition-ul" id="moderating-list">
+                            <li>an agreed pause;</li>
+                            <li>a specific time to reconnect;</li>
+                            <li>naming the need for reflection without ending contact;</li>
+                            <li>allowing both dialogue and processing time.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="counter-hypothesis-box" id="counter-hypothesis-box-inner">
+                        <h5>Counter-hypothesis</h5>
+                        <p id="counter-hypothesis-body">
+                          The observed pattern may also be shaped by current stress, learned communication habits, context, or unequal expectations rather than the interpreted source features.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Tab Panel 3: Person B -->
+              <div class="tab-panel" id="person-b-panel" role="tabpanel" aria-labelledby="tab-person-b" aria-hidden="true">
+                <div class="panel-content">
+                  <div class="panel-meta mono-tag" id="person-b-meta">Individual Tendency</div>
+                  <h3 class="panel-title" id="person-b-title">Internal processing before dialogue</h3>
+                  <p class="panel-body" id="person-b-body">
+                    This sample perspective represents a possible need for internal distance before discussion. It is not a fixed trait and must be compared with lived experience.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Dynamic Visualizer Card -->
+          <div class="tabs-widget-right" id="report-visual-side">
+            <div class="interactive-report-visual-card" id="report-visualizer-card">
+              <!-- Header with current perspective -->
+              <div class="visual-card-header" id="visual-header">
+                <div class="visual-card-badge" id="visual-badge">Shared Dynamic Visualization</div>
+                <div class="visual-card-title-small" id="visual-title-small">Different processing tempo</div>
+              </div>
+
+              <!-- SVG Interactive Canvas Stage -->
+              <div class="visual-canvas-stage" id="visual-canvas-stage">
+                <!-- SVG injected dynamically depending on active Archetype & Perspective -->
+                <svg id="live-dynamic-svg" viewBox="0 0 400 300" width="100%" height="100%" style="background: transparent;" aria-label="Abstract relationship dynamic diagram">
+                  <!-- Generated dynamically in app.js -->
+                </svg>
+              </div>
+
+              <!-- Controls for the live visualization -->
+              <div class="visual-card-controls" id="visual-controls">
+                <div class="live-status-row">
+                  <span class="pulse-indicator">●</span>
+                  <span class="status-mode-text" id="visual-status-text">Dynamic Mode: Interactive Sliders</span>
+                </div>
+                
+                <!-- Dynamic Interactive Sliders -->
+                <div class="visual-sliders-group" id="visual-controls-group">
+                  <div class="control-slider-wrapper">
+                    <label class="slider-label" for="param-slider-1" id="slider-1-label">Person A Input: <span id="val-1-text">Active</span></label>
+                    <input type="range" class="control-slider" id="param-slider-1" min="1" max="100" value="75">
+                  </div>
+                  <div class="control-slider-wrapper">
+                    <label class="slider-label" for="param-slider-2" id="slider-2-label">Person B Input: <span id="val-2-text">Calm</span></label>
+                    <input type="range" class="control-slider" id="param-slider-2" min="1" max="100" value="20">
+                  </div>
+                </div>
+
+                <!-- Toggle States (e.g. Stress vs Safety) -->
+                <div class="visual-toggles-row" id="visual-toggles">
+                  <button class="btn-visual-toggle active" id="btn-toggle-normal">Interactive Sliders</button>
+                  <button class="btn-visual-toggle" id="btn-toggle-shadow">Possible Shadow (Stress)</button>
+                  <button class="btn-visual-toggle" id="btn-toggle-opportunity">Possible Opportunity (Safety)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — OPPORTUNITY AND SHADOW -->
+    <section class="opportunity-shadow-section section-spacing" aria-labelledby="opp-shadow-title">
+      <div class="container">
+        <div class="opp-shadow-intro">
+          <h2 id="opp-shadow-title">One pattern. More than one possible expression.</h2>
+          <p>Every interpersonal pattern has two faces depending on context, intention, and awareness. Toggle the circle halves below to explore the shift.</p>
+        </div>
+
+        <div class="opp-shadow-layout">
+          <!-- Left: Divided circle control -->
+          <div class="interactive-circle-widget">
+            <div class="divided-circle-container">
+              <!-- Left half: Shadow -->
+              <div class="circle-half circle-half-left" id="shadow-half" role="button" aria-label="Select Possible Shadow perspective" tabindex="0">
+                <span class="circle-label label-shadow">Possible Shadow</span>
+              </div>
+              <!-- Right half: Opportunity -->
+              <div class="circle-half circle-half-right" id="opp-half" role="button" aria-label="Select Possible Opportunity perspective" tabindex="0">
+                <span class="circle-label label-opportunity">Possible Opportunity</span>
+              </div>
+              <!-- Core node -->
+              <div class="circle-center-node" aria-hidden="true"></div>
+            </div>
+
+            <!-- Alternative keyboard button toggles -->
+            <div class="circle-controls-btns" role="group" aria-label="Perspective selectors">
+              <button class="btn-circle-toggle active" id="btn-show-all">Show Both</button>
+              <button class="btn-circle-toggle" id="btn-show-opp">Opportunity</button>
+              <button class="btn-circle-toggle" id="btn-show-shadow">Shadow</button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Display Panels -->
+          <div class="opp-shadow-display-panels">
+            <div class="opp-shadow-card shadow-theme" id="shadow-card">
+              <h3 id="shadow-title-card">Possible Shadow</h3>
+              <p id="shadow-body-card">Under stress, time pressure, or without a clear pause agreement, the dynamic can become visible as a pressure–withdrawal loop.</p>
+            </div>
+
+            <div class="opp-shadow-card opportunity-theme" id="opp-card">
+              <h3 id="opp-title-card">Possible Opportunity</h3>
+              <p id="opp-body-card">With an agreed pause and a specific time to reconnect, the same difference can support both dialogue and reflection.</p>
+            </div>
+
+            <div class="opp-shadow-qualification" id="opp-shadow-disclaimer">
+              These are conditional hypotheses to compare with lived experience, not fixed traits. Neither person is the sole cause of the shadow, and opportunities do not guarantee automated success.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — WHAT THE REPORT HELPS YOU EXPLORE -->
+    <section class="explore-section section-spacing" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="explore-intro">
+          <h2 id="explore-title">What the report helps you explore</h2>
+          <p>Our comprehensive framework approaches interpersonal maps through four refined relational dimensions.</p>
+        </div>
+
+        <div class="editorial-grid">
+          <!-- Module 1 -->
+          <div class="editorial-module">
+            <div class="module-graphic-placeholder" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <div class="module-content">
+              <h3>Communication and processing tempo</h3>
+              <p>How both people express, receive, and process communication.</p>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="editorial-module">
+            <div class="module-graphic-placeholder" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="module-content">
+              <h3>Closeness and autonomy</h3>
+              <p>How connection and individual space may be negotiated.</p>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="editorial-module">
+            <div class="module-graphic-placeholder" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+            </div>
+            <div class="module-content">
+              <h3>Conflict and repair</h3>
+              <p>What may intensify friction and what may support reconnection.</p>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="editorial-module">
+            <div class="module-graphic-placeholder" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="module-content">
+              <h3>Timing and activation windows</h3>
+              <p>When certain themes may become more visible without turning timing into prediction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — METHOD AND EVIDENCE -->
+    <section class="method-section section-spacing" id="method" aria-labelledby="method-title">
+      <div class="container method-layout">
+        <div class="method-intro">
+          <h2 id="method-title">Different perspectives. Visible boundaries.</h2>
+          <p>
+            Every visible dynamic must point back to its source features and reviewed mapping rules. Signals that come from the same calculation family are not counted as independent confirmations. Missing or conflicting evidence stays visible instead of being filled with invented certainty.
+          </p>
+          <div class="method-buttons">
+            <a href="./method.html" class="btn btn-primary" id="method-read-btn">Read the method</a>
+            <button class="btn btn-secondary" id="open-evidence-btn">Show evidence example</button>
+          </div>
+        </div>
+
+        <div class="principles-stack">
+          <div class="principle-item">
+            <h3>Native calculations stay native</h3>
+            <p>Each source system is calculated and represented within its own defined scope.</p>
+          </div>
+          <div class="principle-item">
+            <h3>Evidence can be inspected</h3>
+            <p>Visible relationship dynamics retain traceability to their source features and mapping version.</p>
+          </div>
+          <div class="principle-item">
+            <h3>Unsupported claims are withheld</h3>
+            <p>When evidence is incomplete, contradictory, or not reviewed, the product must abstain rather than manufacture certainty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9 — PRIVACY -->
+    <section class="privacy-section section-spacing" id="privacy" aria-labelledby="privacy-title">
+      <div class="container privacy-layout">
+        <div class="privacy-content">
+          <h2 id="privacy-title">Sensitive data needs a narrow purpose.</h2>
+          <p>
+            The product is designed to minimize the exposure of birth data, separate identity from calculation, and keep provider credentials out of the browser. Production retention, deletion, and consent rules must be explicit before launch.
+          </p>
+          <a href="./privacy.html" class="btn btn-primary" id="privacy-read-btn">Read the privacy principles</a>
+        </div>
+
+        <div class="paper-card">
+          <h3 class="serif-heading" style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--cobalt-deep);">Privacy Foundations</h3>
+          <ul class="privacy-list">
+            <li>Minimize client-side exposure.</li>
+            <li>Do not place provider credentials in browser code.</li>
+            <li>Keep identity and calculation responsibilities separate.</li>
+            <li>Make consent, retention, and deletion visible.</li>
+            <li>Do not log sensitive form values.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10 — FINAL CTA -->
+    <section class="final-cta-section section-spacing" aria-labelledby="cta-title">
+      <!-- Decorative background lines -->
+      <svg class="cta-svg-lines" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(39, 56, 108, 0.08)" stroke-width="1.5" />
+        <line x1="1200" y1="200" x2="800" y2="200" stroke="rgba(39, 56, 108, 0.08)" stroke-width="1.5" />
+        <circle cx="400" cy="200" r="4" fill="var(--sage-muted)" />
+        <circle cx="800" cy="200" r="4" fill="var(--rose-muted)" />
+      </svg>
+
+      <div class="container">
+        <div class="final-cta-card">
+          <h2 id="cta-title">Start with curiosity, not certainty.</h2>
+          <p>
+            Create an account to begin a relationship report, or log in to continue an existing one.
+          </p>
+          <div class="cta-buttons">
+            <a href="./register.html?next=create-report" class="btn btn-primary" id="cta-register-btn">Create an account</a>
+            <a href="./login.html?next=create-report" class="btn btn-secondary" id="cta-login-btn">Log in</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION 11 — FOOTER -->
+  <footer class="global-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo-col">
+          <span class="footer-wordmark">Bazodiac Relationships</span>
+          <p>
+            An explanatory portal combining precise methodologies from Western astrology and Eastern metaphysics to examine relational structures.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <div class="footer-nav-group">
+            <h4>Method & Policy</h4>
+            <a href="./method.html" id="foot-method">Method</a>
+            <a href="./privacy.html" id="foot-privacy">Privacy</a>
+            <a href="./terms.html" id="foot-terms">Terms</a>
+            <a href="./accessibility.html" id="foot-accessibility">Accessibility</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Access</h4>
+            <a href="./login.html" id="foot-login">Log in</a>
+            <a href="./register.html?next=create-report" id="foot-register">Create account</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-disclaimer">
+          <strong>Disclaimer:</strong> For reflection and educational use. Not medical, psychological, legal, or relationship advice.
+        </div>
+        <div class="footer-copyright">
+          © Bazodiac Relationships
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ACCESSIBLE MODAL DIALOG (EVIDENCE) -->
+  <div class="modal-overlay" id="modal-overlay" aria-hidden="true" role="presentation">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-headline">Evidence Analysis Model</h3>
+        <button class="modal-close-btn" id="close-evidence-btn-header" aria-label="Close evidence modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-status-pill">DEMO EVIDENCE · NOT A REAL CALCULATION</div>
+        
+        <table class="evidence-fields-table">
+          <tbody>
+            <tr>
+              <th>Source family</th>
+              <td>Sample interaction family</td>
+            </tr>
+            <tr>
+              <th>Source feature</th>
+              <td>Different preferred processing tempos</td>
+            </tr>
+            <tr>
+              <th>Mapping rule</th>
+              <td><span class="code-val">DEMO-RULE-001</span></td>
+            </tr>
+            <tr>
+              <th>Mapping version</th>
+              <td><span class="code-val">0.1.0-demo</span></td>
+            </tr>
+            <tr>
+              <th>Review status</th>
+              <td>Demonstration only</td>
+            </tr>
+            <tr>
+              <th>Counter-signal</th>
+              <td>Observed behavior may contradict the sample hypothesis.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="evidence-limitation-note">
+          <strong>Limitations:</strong> No birth data was processed. No relationship conclusion was calculated.
+        </div>
+
+        <div style="margin-top: 2rem; text-align: right;">
+          <button class="btn btn-primary" id="close-evidence-btn">Close evidence example</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Local non-module scripts for file:// CORS safety -->
+  <script src="./content.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

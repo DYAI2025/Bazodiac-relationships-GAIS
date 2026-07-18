@@ -1,0 +1,6 @@
+{
+  "name": "Bazodiac Relationships",
+  "description": "Explanatory landing page and interactive HTML click dummy for Bazodiac Relationships.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

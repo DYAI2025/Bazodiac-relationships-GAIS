@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Principles — Bazodiac Relationships</title>
+  <link class="styles" rel="stylesheet" href="./styles.css">
+</head>
+<body style="background-color: var(--canvas-ivory);">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="global-header">
+    <div class="container header-container">
+      <a href="./index.html" class="wordmark">Bazodiac Relationships</a>
+      <div class="header-actions" style="display: flex;">
+        <a href="./index.html" class="link-alt">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="support-main">
+    <div class="container">
+      <article class="support-article">
+        <div class="back-home-nav">
+          <a href="./index.html">← Back to Home</a>
+        </div>
+
+        <h1>Privacy principles</h1>
+        
+        <p>
+          Birth details and relational data represent highly personal, sensitive dimensions of human life. We believe that protecting this information is a core functional requirement, not a secondary compliance chore. Below are the architectural privacy principles guiding our product development.
+        </p>
+
+        <div class="method-boundary" style="margin-bottom: 2rem;">
+          <p><strong>Note:</strong> This document describes the intended architecture and privacy goals of the production platform. It does not represent a claim that all complex database partitions and logging firewalls are active within this initial frontend click dummy prototype.</p>
+        </div>
+
+        <h2>1. Client-Side Minimization</h2>
+        <p>
+          We strictly limit client-side exposure. Complex astrological and metadata calculations are executed in secure server-side environments. No raw, unencrypted birth data or calculation assets are stored in local browser state databases, sessionStorage, or global window states longer than necessary for the current session.
+        </p>
+
+        <h2>2. Keep Provider Secrets Safe</h2>
+        <p>
+          To maintain API keys and system integrity, all third-party lookup integrations (such as astronomical coordinate services) are handled strictly through our secure backend API gateways. No provider credentials, client secrets, or private API keys are ever shipped to the user's browser.
+        </p>
+
+        <h2>3. Separation of Identity and Calculation</h2>
+        <p>
+          Our database schema separates personal identities (email addresses, accounts) from celestial calculation profiles. By decoupling "who" is reflecting from the "features" being mapped, we establish an defense against unauthorized identity correlation in the event of a data breach.
+        </p>
+
+        <h2>4. Explicit Purpose and Consent</h2>
+        <p>
+          Data is processed for a single, narrow purpose: generating your requested relationship reflection reports. We do not sell user profiles, utilize data for advertisement targeting, or cross-reference birth records with external data aggregators. Consent can be updated or withdrawn at any time.
+        </p>
+
+        <h2>5. Strict Log Protection</h2>
+        <p>
+          We employ filter pipelines to ensure that sensitive form inputs—such as specific birth times, coordinates, and passwords—never enter our application server logs or system telemetry streams.
+        </p>
+
+        <h2>6. Proactive Retention and Deletion</h2>
+        <p>
+          Users retain full ownership of their data. Account deletion triggers complete deletion of both personal records and associated calculation profiles across our cloud databases.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="global-footer">
+    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--surface-warm);">
+      © Bazodiac Relationships · <a href="./index.html" style="color: var(--surface-soft); text-decoration: underline;">Back to Home</a>
+    </div>
+  </footer>
+
+</body>
+</html>

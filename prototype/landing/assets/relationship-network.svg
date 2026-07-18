@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" aria-hidden="true" style="background: transparent;">
+  <!-- Group with subtle movement animation if supported, otherwise static -->
+  <g class="network-group">
+    <!-- Grid/Hexagon subtle structural background -->
+    <path d="M 400,200 L 486.6,250 L 486.6,350 L 400,400 L 313.4,350 L 313.4,250 Z" 
+          fill="none" stroke="rgba(39, 56, 108, 0.12)" stroke-width="1" />
+    <path d="M 400,100 L 573.2,200 L 573.2,400 L 400,500 L 226.8,400 L 226.8,200 Z" 
+          fill="none" stroke="rgba(142, 120, 81, 0.08)" stroke-width="1" stroke-dasharray="4 4" />
+          
+    <!-- Left Network (Person A) -->
+    <!-- Nodes -->
+    <circle cx="200" cy="220" r="5" fill="#8da8a1" /> <!-- Sage node -->
+    <circle cx="160" cy="300" r="4" fill="#a49596" /> <!-- Rose node -->
+    <circle cx="240" cy="360" r="6" fill="#8e7851" /> <!-- Bronze node -->
+    <circle cx="180" cy="420" r="4" fill="#27386c" /> <!-- Cobalt node -->
+    
+    <!-- Connection lines -->
+    <line x1="160" y1="300" x2="200" y2="220" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    <line x1="200" y1="220" x2="240" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    <line x1="160" y1="300" x2="240" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    <line x1="240" y1="360" x2="180" y2="420" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    
+    <!-- Right Network (Person B) -->
+    <!-- Nodes -->
+    <circle cx="600" cy="220" r="5" fill="#8da8a1" /> <!-- Sage node -->
+    <circle cx="640" cy="300" r="4" fill="#a49596" /> <!-- Rose node -->
+    <circle cx="560" cy="360" r="6" fill="#8e7851" /> <!-- Bronze node -->
+    <circle cx="620" cy="420" r="4" fill="#27386c" /> <!-- Cobalt node -->
+    
+    <!-- Connection lines -->
+    <line x1="640" y1="300" x2="600" y2="220" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    <line x1="600" y1="220" x2="560" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    <line x1="640" y1="300" x2="560" y2="360" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+    <line x1="560" y1="360" x2="620" y2="420" stroke="rgba(93, 77, 70, 0.18)" stroke-width="1.5" />
+
+    <!-- Convergence to Shared Dynamic in Center -->
+    <g class="evidence-connections">
+      <!-- From A to Center -->
+      <line x1="240" y1="360" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.35)" stroke-width="1.5" stroke-dasharray="5 3" class="animated-line" />
+      <line x1="200" y1="220" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.2)" stroke-width="1" />
+      
+      <!-- From B to Center -->
+      <line x1="560" y1="360" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.35)" stroke-width="1.5" stroke-dasharray="5 3" class="animated-line" />
+      <line x1="600" y1="220" x2="400" y2="300" stroke="rgba(39, 56, 108, 0.2)" stroke-width="1" />
+    </g>
+
+    <!-- Center (Shared Dynamic) -->
+    <!-- Two-part divided opportunity/shadow central composition (Divided circle motif) -->
+    <g transform="translate(400, 300)">
+      <!-- Outer gold aura -->
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#ab9b73" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+      
+      <!-- Split shadow half (left side) -->
+      <path d="M 0,-30 A 30,30 0 0,0 0,30 Z" fill="#27386c" fill-opacity="0.9" /> <!-- Cobalt deep -->
+      
+      <!-- Split opportunity half (right side) -->
+      <path d="M 0,-30 A 30,30 0 0,1 0,30 Z" fill="#f3e0ce" fill-opacity="0.95" stroke="#ab9b73" stroke-width="1" /> <!-- Soft blush/gold border -->
+      
+      <!-- Central core interaction node -->
+      <circle cx="0" cy="0" r="6" fill="#a94432" /> <!-- Cinnabar node -->
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#a94432" stroke-width="1" stroke-opacity="0.5" />
+    </g>
+  </g>
+</svg>
