@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Bazodiac Relationships GAIS Prototype
 
-# Run and deploy your AI Studio app
+This repository preserves the first rich interaction prototype for Bazodiac Relationships.
 
-This contains everything you need to run your app locally.
+## Repository role
 
-View your app in AI Studio: https://ai.studio/apps/71416a52-16e2-4cf7-8d11-ea1a1d6a57ed
+**Status: reference prototype, not the canonical production frontend.**
 
-## Run Locally
+The repository is retained because it contains useful interaction and documentation material:
 
-**Prerequisites:**  Node.js
+- a multi-page static landing-page prototype;
+- relationship-dynamic filters and sample archetypes;
+- evidence, conditions, opportunity/shadow and walkthrough concepts;
+- accessibility and prototype documentation.
 
+The canonical application frontend is being developed in `DYAI2025/Bazodiac_Relationship` under `apps/web`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Important limitations
+
+- The React/Vite root currently acts as a redirect shell around the static prototype.
+- The normal Vite build does not package the full static prototype path.
+- Some sample-content structures do not match the JavaScript renderer contract.
+- Some sample wording is too deterministic or blame-oriented for production use.
+- The static CSS imports remote fonts and is therefore not fully offline.
+
+Do not merge this code wholesale into the canonical application. Port only reviewed interaction concepts as typed React/TypeScript modules.
+
+## Run the static prototype
+
+Open `prototype/landing/index.html` directly in a browser.
+
+## Related documentation
+
+- [Frontend decision record](docs/FRONTEND_DECISION_RECORD.md)
+- [Comparative gap analysis](docs/FRONTEND_GAP_ANALYSIS.md)
+- Jira: `BAZ-55`
+- Canonical repository: https://github.com/DYAI2025/Bazodiac_Relationship
